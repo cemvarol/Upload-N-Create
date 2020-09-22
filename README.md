@@ -101,7 +101,9 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
           Install-Module -Name Az -AllowClobber -Scope CurrentUser
         }
      ```
-
+    > **Note:** Please Accept all the installation options by typing A (Yes to ALL) follwing an Enter on the command 
+    
+    
 ### Task 2: Prepare the Guest
 1.  After *Host* is ready, time to prepare the guest.
 1.  [**Sysprep**](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/upload-generalized-managed#generalize-the-source-vm-by-using-sysprep) and shutdown the VM.
