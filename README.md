@@ -127,9 +127,9 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
 1.  Run this on 2019 PowerShell console this will use the size of your fixed size disk and create an empty disk space to upload your own disk to on Azure. 
 
     ```Powershell
-
+    $L = (Get-AzResourceGroup -Name Migrator).Location
     $vhdSizeBytes = (Get-Item "C:\VMs\2012C.vhd").length
-    $diskconfig = New-AzDiskConfig -SkuName 'Standard_LRS' -OsType 'Windows' -UploadSizeInBytes $vhdSizeBytes -Location 'EastUs' -CreateOption 'Upload'
+    $diskconfig = New-AzDiskConfig -SkuName 'Standard_LRS' -OsType 'Windows' -UploadSizeInBytes $vhdSizeBytes -Location $L -CreateOption 'Upload'
     New-AzDisk -ResourceGroupName "Migrator" -DiskName "cems.vhd" -Disk $diskconfig
     ```
     
@@ -154,8 +154,8 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
 1.  Now everything is ready to create the vm
      
      ```Powershell
-     $disk = Get-AzDisk -ResourceGroupName 'Migrator' -DiskName 'cems.vhd'
-    $location = 'East US'
+    $disk = Get-AzDisk -ResourceGroupName 'Migrator' -DiskName 'cems.vhd'
+    $location = (Get-AzResourceGroup -Name Migrator).Location
     $imageName = 'cems'
     $rgName = 'Migrator'
 
@@ -167,12 +167,10 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
     -OsType Windows `
     -ManagedDiskId $disk.Id
 
-
     $image = New-AzImage `
     -ImageName $imageName `
     -ResourceGroupName $rgName `
     -Image $imageConfig
-
 
     New-AzVm `
     -ResourceGroupName $rgName `
@@ -182,5 +180,5 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
     -VirtualNetworkName "Mig-VNet" `
     -SubnetName "SN01" `
     -SecurityGroupName "MigNSG" `
-    -PublicIpAddressName "myPIP" 
+    -PublicIpAddressName "Migrated-Pip" 
     ```
