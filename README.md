@@ -201,3 +201,15 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
     
     > **Note:** Creating the VM may take like 3-5 minutes
     
+### Task 2: Check the output
+
+1.  Go back to Azure portal and navigate to newly created Resource Group. Click the Traffic Manager **Mig-TM**
+2.  On the overview page you will see 2 Endpoints. Ensure that Onprem is Degraded, and Migrated is Online this time.
+       
+    | Name | Status | Monitor Status |
+    | --- | --- |--- |
+    | Onprem | Enabled | **Degraded**|
+    |Migrated | Enabled |**Online**|
+    
+2.  Copy the **DNS Name** and visit that URL on a new tab on your browser
+3.  Ensure that the page welcomes you with the current date as you have seen on the earlier
