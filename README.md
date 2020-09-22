@@ -158,7 +158,7 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
      
 ## Exercise 3: Create the VM out of uploaded vhd
      
-### Task 3: Time of the VM
+### Task 1: Time of the VM
      
 1.  Now everything is ready to create the vm
      
