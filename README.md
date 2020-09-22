@@ -194,9 +194,10 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
 
 1.  After you run the command a dialog box will appear for a UserName and a Password for a VM. Provide something you will remember. 
 
-
+    
 | Username | Password |
 | --- | --- |
 | QA | 1q2w3e4r5t6y* |
-        
+    
+    > **Note:** Creating the VM may take like 3-5 minutes
     
