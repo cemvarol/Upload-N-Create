@@ -212,4 +212,4 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
     |Migrated | Enabled |**Online**|
     
 2.  Copy the **DNS Name** and visit that URL on a new tab on your browser
-3.  Ensure that the page welcomes you with the current date as you have seen on Exercise 2, Task 2
+3.  Ensure that the page welcomes you with the content as you have seen on Exercise 2, Task 2
