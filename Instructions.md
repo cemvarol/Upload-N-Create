@@ -117,7 +117,7 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
         1.  Tick **Generalize**
         1.  Select **Shutdown**
 1.  Wait Until Shut Down
-1.  Run the command below to convert the 2012R2 dynamically expanding disk 
+1.  Run the command below on the **Host Computer** to convert the 2012R2 dynamically expanding disk to fixed disk
     ```Powershell
     cd \
     cd vms
