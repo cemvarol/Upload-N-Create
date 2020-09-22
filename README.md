@@ -196,8 +196,8 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
 
     > **E.g.** Username: **Cem** and Password: **1q2w3e4r5t6y***
 
-        | Username | Password |
-        | --- | --- |
-        | Cem | 1q2w3e4r5t6y* |
+| Username | Password |
+| --- | --- |
+| Cem | 1q2w3e4r5t6y* |
         
     
