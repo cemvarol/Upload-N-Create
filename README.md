@@ -93,4 +93,10 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
     >**Note:** Please extract AZ-Copy under C:\vms folder
 1.  Install [**Azure Powershell**](https://docs.microsoft.com/en-us/powershell/azure/install-Az-ps?view=azps-4.3.0#code-try-1)
 
+### Task 1: Prepare the Guest
+1.  After *Host* is ready, time to prepare the guest.
+1.  [**Sysprep**](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/upload-generalized-managed#generalize-the-source-vm-by-using-sysprep) and shutdown the VM.
+    >**Note:** Choose the option *Generalize*
+    
+
 
