@@ -129,7 +129,7 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
     ```Powershell
     Add-AzAccount
     ```
-Please complete the steps for authentication to Azure 
+    Please complete the steps for authentication to Azure 
 
 1.  Run this on 2019 PowerShell console this will use the size of your fixed size disk and create an empty disk space to upload your own disk to on Azure. 
 
