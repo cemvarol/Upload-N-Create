@@ -47,7 +47,7 @@ chmod +x Resources.bash
 
 ```Powershell
 cd\
-mkdir Lab03
+mkdir Lab
 $url = "https://raw.githubusercontent.com/cemvarol/Upload-N-Create/master/SetLab.ps1"
 $output = "C:\Lab\Lab.ps1"
 Invoke-WebRequest -Uri $url -OutFile $output
