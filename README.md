@@ -193,13 +193,13 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
     ```
 
 1.  After you run the command a dialog box will appear for a UserName and a Password for a VM. Provide something you will remember. 
-
+    
     
 | Username | Password |
 | --- | --- |
 | QA | 1q2w3e4r5t6y* |
-    
     > **Note:** Creating the VM may take like 3-5 minutes
+    
     
 ### Task 2: Check the output
 
@@ -212,4 +212,4 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
     |Migrated | Enabled |**Online**|
     
 2.  Copy the **DNS Name** and visit that URL on a new tab on your browser
-3.  Ensure that the page welcomes you with the current date as you have seen on the earlier
+3.  Ensure that the page welcomes you with the current date as you have seen on Exercise 2, Task 2
