@@ -69,7 +69,7 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
 
 ### Task 2: Check the output
 
-1.  Go back to Azure portal and navigate to newly created Resource Group. Click the Traffic Manager **Lab-03-TM**
+1.  Go back to Azure portal and navigate to newly created Resource Group. Click the Traffic Manager **Mig-TM**
 2.  On the overview page you will see 2 Endpoints. Ensure that Onprem is Online, and Migrated is Degraded.
        
     | Name | Status | Monitor Status |
