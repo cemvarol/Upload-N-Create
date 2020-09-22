@@ -187,7 +187,7 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
     -Image $image.Id `
     -Location $location `
     -VirtualNetworkName "Mig-VNet" `
-    -SubnetName "SN01" `
+    -SubnetName "SN02" `
     -SecurityGroupName "MigNSG" `
     -PublicIpAddressName "Migrated-Pip" 
     ```
