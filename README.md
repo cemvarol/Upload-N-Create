@@ -213,3 +213,24 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
     
 2.  Copy the **DNS Name** and visit that URL on a new tab on your browser
 3.  Ensure that the page welcomes you with the content as you have seen on Exercise 2, Task 2
+
+
+
+## Exercise 4: Remove Azure resources deployed in the lab
+
+1. From the Cloud Shell pane, run the following to list the resource group you created in this exercise:
+
+   ```sh
+   az group list --query "[?contains(name,'Migr')]".name --output tsv
+   ```
+
+    > **Note**: Verify that the output contains only the resource group you created in this lab. This group will be deleted in this task.
+
+1. From the Cloud Shell pane, run the following to delete the resource group you created in this lab
+
+   ```sh
+   az group list --query "[?contains(name,'Migr')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   ```
+
+1. Close the Cloud Shell pane.
+
