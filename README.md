@@ -113,9 +113,10 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
     1.  This will open Sysprep folder.
     1.  Double cick **sysprep**.
     1.  This will open *Sysprep Dialog Box*.
-    1.  Choose **OOBE**, Select **Generalize** and Select **Shutdown**.
-        1.  OOBE
-        >**Note:** Choose the option *Generalize*
+         1.  Leave **OOBE** (This was Default Setting)
+         1.  Tick **Generalize**
+         1.  Select **Shutdown**
+    1.  Wait Until Shut Down
 1.  Run the command below to convert the 2012R2 dynamically expanding disk 
     ```Powershell
     Convert-VHD -Path C:\VMs\2012-R2.vhd -DestinationPath C:\VMs\2012C.vhd -VHDType fixed
