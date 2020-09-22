@@ -48,10 +48,10 @@ chmod +x Resources.bash
 ```Powershell
 cd\
 mkdir Lab03
-$url = "https://raw.githubusercontent.com/cemvarol/AZ-304-Labs/master/Lab-03/SetLab.ps1"
-$output = "C:\Lab03\Lab03.ps1"
+$url = "https://raw.githubusercontent.com/cemvarol/Upload-N-Create/master/SetLab.ps1"
+$output = "C:\Lab\Lab.ps1"
 Invoke-WebRequest -Uri $url -OutFile $output
-Start-Process Powershell.exe -Argumentlist "-file C:\Lab03\Lab03.ps1"
+Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
 ```
 
 > **Note:** This will take approximetaly 6-8 minutes. When finished Hyper-V Console will appear.
