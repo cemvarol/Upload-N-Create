@@ -13,4 +13,12 @@ chmod +x Resources.bash
 
 ## Step 2 Create a VM to migrate to Azure
 
+```Powershell
+cd\
+mkdir Lab03
+$url = "https://raw.githubusercontent.com/cemvarol/AZ-304-Labs/master/Lab-03/SetLab.ps1"
+$output = "C:\Lab03\Lab03.ps1"
+Invoke-WebRequest -Uri $url -OutFile $output
+Start-Process Powershell.exe -Argumentlist "-file C:\Lab03\Lab03.ps1"
+```
 
