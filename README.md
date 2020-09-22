@@ -114,7 +114,7 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
     1.  Double cick **sysprep**.
     1.  This will open *Sysprep Dialog Box*.
          1.  Leave **OOBE** (This was Default Setting)
-         1.  Tick **Generalize**
+        1.  Tick **Generalize**
          1.  Select **Shutdown**
 1.  Wait Until Shut Down
 1.  Run the command below to convert the 2012R2 dynamically expanding disk 
