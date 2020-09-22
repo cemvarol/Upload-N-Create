@@ -67,4 +67,22 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
 -   Note: Your Guest Vm will be restarted once more automatically and will be ready after this step.
 
 
+#### Task 2: Check the output
+
+1.  Go back to Azure portal and navigate to newly created Resource Group. Click the Traffic Manager **Lab-03-TM**
+2.  On the overview page you will see 2 Endpoints. Ensure that Onprem is Online, and Migrated is Degraded.
+       
+    | Name | Status | Monitor Status |
+    | --- | --- |--- |
+    | Onprem | Enabled | **Online**|
+    |Migrated | Enabled |**Degraded**|
+    
+2.  Copy the **DNS Name** and visit that URL on a new tab on your browser
+3.  Ensure that the page welcomes you with the current date
+
+> **Note:** If fails please ask for support, this will be needed for the next exercises.
+
+> #### Result: We created a server hosting 2012-R2 VM. This vm is published to internet with its dns name and that name is behind a Traffic Manager. When a client visits the Traffic Manager URL, they will be diverted to use the 2012-R2 guest vm on the on-prem host.When the Lab completed, 2012-R2 VM will be migrated to Azure and Traffic Manager will show vise-versa, but the page will be still available.
+
+
 
