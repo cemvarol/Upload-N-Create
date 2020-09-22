@@ -116,7 +116,7 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
          1.  Leave **OOBE** (This was Default Setting)
          1.  Tick **Generalize**
          1.  Select **Shutdown**
-    1.  Wait Until Shut Down
+1.  Wait Until Shut Down
 1.  Run the command below to convert the 2012R2 dynamically expanding disk 
     ```Powershell
     Convert-VHD -Path C:\VMs\2012-R2.vhd -DestinationPath C:\VMs\2012C.vhd -VHDType fixed
