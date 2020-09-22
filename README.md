@@ -127,7 +127,7 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
    ```Powershell
       $diskSas = Grant-AzDiskAccess -ResourceGroupName 'Migrator' -DiskName 'cems.vhd' -DurationInSecond 86400 -Access 'Write'
       $disk = Get-AzDisk -ResourceGroupName 'Migrator' -DiskName 'cems.vhd'
-   ```
+    ```
    
 1.  Time to upload your 40GB disk to azure 
    
