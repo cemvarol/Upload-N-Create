@@ -93,14 +93,14 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
     >**Note:** Please extract AZ-Copy under C:\vms folder
 1.  Install [**Azure Powershell**](https://docs.microsoft.com/en-us/powershell/azure/install-Az-ps?view=azps-4.3.0#code-try-1). You can run the script below 
         
-        ```Powershell
+     ```Powershell
         if ($PSVersionTable.PSEdition -eq 'Desktop' -and (Get-Module -Name AzureRM -ListAvailable)) {
         Write-Warning -Message ('Az module not installed. Having both the AzureRM and ' +
         'Az modules installed at the same time is not supported.')
         } else {
           Install-Module -Name Az -AllowClobber -Scope CurrentUser
         }
-        ```
+     ```
 
 ### Task 1: Prepare the Guest
 1.  After *Host* is ready, time to prepare the guest.
