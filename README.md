@@ -109,7 +109,7 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
 
 1.  [**Sysprep**](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/upload-generalized-managed#generalize-the-source-vm-by-using-sysprep) and shutdown the VM.
     1.  Open the Hyper-V Console and access 2012-R2 Console.
-    1.  Go to *RUN* option under start menu, type **sysprep** and hit *Enter*
+    1.  Right Click Start icon and choose *RUN* to open Run Menu, type **sysprep** and hit *Enter*
     1.  This will start Sysprep progress.
         >**Note:** Choose the option *Generalize*
 1.  Run the command below to convert the 2012R2 dynamically expanding disk 
