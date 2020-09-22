@@ -1,7 +1,7 @@
 ### This will upload vhd and create a vm out of that vhd
 
 
-## Exercise 1: to create the environment
+## Exercise 1: Create the environment
 
 1.  Open [**Cloud Shell**](https://shell.azure.com) pane by selecting on
     the toolbar icon directly to the right of the search textbox.
@@ -84,5 +84,13 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
 
 > #### Result: We created a server hosting 2012-R2 VM. This vm is published to internet with its dns name and that name is behind a Traffic Manager. When a client visits the Traffic Manager URL, they will be diverted to use the 2012-R2 guest vm on the on-prem host.When the Lab completed, 2012-R2 VM will be migrated to Azure and Traffic Manager will show vise-versa, but the page will be still available.
 
+
+## Exercise 3: Configure the VM for migration
+
+### Task 1: Prepare the Host
+
+1.  Install [**AZ-Copy**](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10)
+    >**Note:** Please extract AZ-Copy under C:\vms folder
+1.  Install [**Azure Powershell**](https://docs.microsoft.com/en-us/powershell/azure/install-Az-ps?view=azps-4.3.0#code-try-1)
 
 
