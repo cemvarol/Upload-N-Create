@@ -124,14 +124,14 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
     
 1.  Run this on 2019 PowerShell console to allow azure PowerShell to access the empty managed disk
 
-   ```Powershell
+    ```Powershell
       $diskSas = Grant-AzDiskAccess -ResourceGroupName 'Migrator' -DiskName 'cems.vhd' -DurationInSecond 86400 -Access 'Write'
       $disk = Get-AzDisk -ResourceGroupName 'Migrator' -DiskName 'cems.vhd'
     ```
    
 1.  Time to upload your 40GB disk to azure 
    
-   ```Powershell
+     ```Powershell
       .\azcopy.exe copy "2012C.vhd" $diskSas.AccessSAS --blob-type PageBlob
       Revoke-AzDiskAccess -ResourceGroupName 'Migrator' -DiskName 'cems.vhd'
      ```
