@@ -111,7 +111,7 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
     Convert-VHD -Path C:\VMs\2012-R2.vhd -DestinationPath C:\VMs\2012C.vhd -VHDType fixed
     ```
 
-### Task 2: Prepare the Cloud
+### Task 3: Prepare the Cloud
 
 1.  Run this on 2019 PowerShell console this will use the size of your fixed size disk and create an empty disk space to upload your own disk to on Azure. 
 
@@ -121,3 +121,11 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
     $diskconfig = New-AzDiskConfig -SkuName 'Standard_LRS' -OsType 'Windows' -UploadSizeInBytes $vhdSizeBytes -Location 'EastUs' -CreateOption 'Upload'
     New-AzDisk -ResourceGroupName "Migrator" -DiskName "cems.vhd" -Disk $diskconfig
     ```
+    
+1.  Run this on 2019 PowerShell console to allow azure PowerShell to access the empty managed disk
+
+   ```Powershell
+      $diskSas = Grant-AzDiskAccess -ResourceGroupName 'Migrator' -DiskName 'cems.vhd' -DurationInSecond 86400 -Access 'Write'
+      $disk = Get-AzDisk -ResourceGroupName 'Migrator' -DiskName 'cems.vhd'
+    ```
+
