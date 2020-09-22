@@ -67,7 +67,7 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
 -   Note: Your Guest Vm will be restarted once more automatically and will be ready after this step.
 
 
-#### Task 2: Check the output
+### Task 2: Check the output
 
 1.  Go back to Azure portal and navigate to newly created Resource Group. Click the Traffic Manager **Lab-03-TM**
 2.  On the overview page you will see 2 Endpoints. Ensure that Onprem is Online, and Migrated is Degraded.
