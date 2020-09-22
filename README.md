@@ -135,3 +135,41 @@ Start-Process Powershell.exe -Argumentlist "-file C:\Lab\Lab.ps1"
       .\azcopy.exe copy "2012C.vhd" $diskSas.AccessSAS --blob-type PageBlob
       Revoke-AzDiskAccess -ResourceGroupName 'Migrator' -DiskName 'cems.vhd'
      ```
+     
+## Exercise 3: Create the VM out of uploaded vhd
+     
+### Task 3: Time of the VM
+     
+1.  Now everything is ready to create the vm
+     
+     ```Powershell
+     $disk = Get-AzDisk -ResourceGroupName 'Migrator' -DiskName 'cems.vhd'
+    $location = 'East US'
+    $imageName = 'cems'
+    $rgName = 'Migrator'
+
+    $imageConfig = New-AzImageConfig `
+    -Location $location
+    $imageConfig = Set-AzImageOsDisk `
+    -Image $imageConfig `
+    -OsState Generalized `
+    -OsType Windows `
+    -ManagedDiskId $disk.Id
+
+
+    $image = New-AzImage `
+    -ImageName $imageName `
+    -ResourceGroupName $rgName `
+    -Image $imageConfig
+
+
+    New-AzVm `
+    -ResourceGroupName $rgName `
+    -Name "CemsVm" `
+    -Image $image.Id `
+    -Location $location `
+    -VirtualNetworkName "Mig-VNet" `
+    -SubnetName "SN01" `
+    -SecurityGroupName "MigNSG" `
+    -PublicIpAddressName "myPIP" 
+    ```
